@@ -44,7 +44,7 @@ def check_stock(location):
 
     # Check if any of the 12 stores have stock available
     for store in data["body"]["content"]["pickupMessage"]["stores"]:
-        if store["partsAvailability"]["MU793ZD/A"]["pickupDisplay"] == "available":
+        if store["partsAvailability"]["MU793ZD/A"]["pickupDisplay"] == "unavailable":
             return True  # iPhones are in stock
     return False  # iPhones are still out of stock
 
@@ -69,4 +69,4 @@ while True:
             message = f"iPhones are in stock at location: {location}!"
             send_pushover_notification(message)
     print("Waiting for an hour before checking again...")
-    time.sleep(3600)
+    # time.sleep(3600)
