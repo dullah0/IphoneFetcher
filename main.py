@@ -69,4 +69,4 @@ while True:
             message = f"iPhones are in stock at location: {location}!"
             send_pushover_notification(message)
     print("Waiting for an hour before checking again...")
-    time.sleep(3600)
+    # time.sleep(3600)
