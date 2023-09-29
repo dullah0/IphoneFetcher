@@ -44,7 +44,7 @@ def check_stock(location):
 
     # Check if any of the 12 stores have stock available
     for store in data["body"]["content"]["pickupMessage"]["stores"]:
-        if store["partsAvailability"]["MU793ZD/A"]["pickupDisplay"] == "available":
+        if store["partsAvailability"]["MU793ZD/A"]["pickupDisplay"] == "unavailable":
             return True  # iPhones are in stock
     return False  # iPhones are still out of stock
 
